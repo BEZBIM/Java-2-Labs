@@ -12,8 +12,8 @@ The primary activity in this lab is copying a file byte by byte using `FileInput
 
 ## Part One: Setup
 
-1. Create a Java Project with a package called iolab.
-2. Copy the sample data `test.txt` file from the lab resources folder into the root of the project directory. Make sure that it is the foor of the project directory and _not_ the root of the `src` directory. If you put it into any other location, your code will not be able to find it and will throw an `IOException` when an attempt is made to open it. >Note: that the output file will not be visible in the project explorer since it is not added to the list of files tracked by the project manifest when it is created. To see your output file, you have to look at the project directory with the Windows file explore.
+1. Create a Java Project with a package called iolab.<br/><br/>
+3. Copy the sample data `test.txt` file from the lab resources folder into the root of the project directory. Make sure that it is the rootthe project directory and _not_ the root of the `src` directory. If you put it into any other location, your code will not be able to find it and will throw an `IOException` when an attempt is made to open it. >Note: that the output file will not be visible in the project explorer since it is not added to the list of files tracked by the project manifest when it is created. To see your output file, you have to look at the project directory with the Windows file explore.
 3. You can create your own file to use as sample input, but you should ensure that it is a `UTF-8` encoded file if you want to use it in the next lab
 
 
