@@ -1,8 +1,4 @@
-Poetry
-From the Anglo-Saxon Rune Poem (Rune version):
-ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ
-ᛋᚳᛖᚪᛚ᛫ᚦᛖᚪᚻ᛫ᛗᚪᚾᚾᚪ᛫ᚷᛖᚻᚹᛦᛚᚳ᛫ᛗᛁᚳᛚᚢᚾ᛫ᚻᛦᛏ᛫ᛞᚫᛚᚪᚾ
-ᚷᛁᚠ᛫ᚻᛖ᛫ᚹᛁᛚᛖ᛫ᚠᚩᚱ᛫ᛞᚱᛁᚻᛏᚾᛖ᛫ᛞᚩᛗᛖᛋ᛫ᚻᛚᛇᛏᚪᚾ᛬
+
 From Laȝamon's Brut (The Chronicles of England, Middle English, West Midlands, ca.1190):
 
 An preost wes on leoden, Laȝamon was ihoten
@@ -22,22 +18,17 @@ erwenden wil, dem werden man,
 den ich mit sorgen în verliez.
 ich bringe in hinnen, ob ich kan.
 sîn vil manegiu tugent michz leisten hiez.
+
 Some lines of Odysseus Elytis (Greek):
 
-Monotonic:
-Τη γλώσσα μου έδωσαν ελληνική
-το σπίτι φτωχικό στις αμμουδιές του Ομήρου.
-Μονάχη έγνοια η γλώσσα μου στις αμμουδιές του Ομήρου.
-από το Άξιον Εστί
-του Οδυσσέα Ελύτη
-
-Polytonic:
 Τὴ γλῶσσα μοῦ ἔδωσαν ἑλληνικὴ
 τὸ σπίτι φτωχικὸ στὶς ἀμμουδιὲς τοῦ Ὁμήρου.
 Μονάχη ἔγνοια ἡ γλῶσσα μου στὶς ἀμμουδιὲς τοῦ Ὁμήρου.
 ἀπὸ τὸ Ἄξιον ἐστί
 τοῦ Ὀδυσσέα Ἐλύτη
+
 The first stanza of Pushkin's Bronze Horseman (Russian):
+
 На берегу пустынных волн
 Стоял он, дум великих полн,
 И вдаль глядел. Пред ним широко
@@ -49,6 +40,7 @@ The first stanza of Pushkin's Bronze Horseman (Russian):
 И лес, неведомый лучам
 В тумане спрятанного солнца,
 Кругом шумел.
+
 Šota Rustaveli's Veṗxis Ṭq̇aosani, ̣︡Th, The Knight in the Tiger's Skin (Georgian):
 
 ვეპხის ტყაოსანი შოთა რუსთაველი
@@ -68,3 +60,14 @@ Kannada poetry by Kuvempu — ಬಾ ಇಲ್ಲಿ ಸಂಭವಿಸು
 ಮಣ್ಣಾಗಿ ಮರವಾಗಿ ಮಿಗವಾಗಿ ಕಗವಾಗಿ
 ಭವ ಭವದಿ ಭತಿಸಿಹೇ ಭವತಿ ದೂರ
 ನಿತ್ಯವೂ ಅವತರಿಪ ಸತ್ಯಾವತಾರ || ಬಾ ಇಲ್ಲಿ ||
+
+a poem written around year 967 by 李煜.
+
+林花謝了春紅 太匆匆
+無奈朝來寒雨 晚來風
+胭脂淚 留人醉 幾時重
+自是人生長恨 水長東
+
+And associated commentary
+
+《相见欢·林花谢了春红》是五代十国时期南唐后主李煜的词作。此词是即景抒情的典范之作，它将人生失意的无限怅恨寄寓在对暮春残景的描绘中，表面上是伤春咏别，实质上是抒写“人生长恨水长东”的深切悲慨。这种悲慨不仅是抒写一己的失意情怀，而且是涵盖了整个人类所共有的生命的缺憾，是一种融汇和浓缩了无数痛苦的人生体验的浩叹。
