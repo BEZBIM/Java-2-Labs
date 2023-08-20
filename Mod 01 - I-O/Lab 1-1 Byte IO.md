@@ -54,9 +54,10 @@ public class ByteCopy {
 
 3. Add the sample file, here named `SampleText.txt` into the main project directory. This file is a modification of the UTF-8 sample file provided by W3C org for testing purposes.
 
-4. You can copy the file from wherever it is then paste it into the project directly in Eclipse. It should look like this. Note that the file is not in the “src” directory bit in the root project directory.<br/>
+4. You can copy the file from wherever it is then paste it into the project directly in Eclipse. It should look like this. Note that the file is not in the “src” directory bit in the root project directory.
+
 ![Same Text](images/file.png)
-<br/>
+
 5. Add the statements to open and close the input file as well as an output statement in the `catch` block that will advise us if the input file cannot be opened. If your code throws this exception at this point the lab, that means that you have put the input file in the wrong place. The throws clause on the main method is to avoid having to wrap the code that closes the file in another `try` block.
 6. Add a temporary output statement at the end of the code to confirm the code executed.
 
