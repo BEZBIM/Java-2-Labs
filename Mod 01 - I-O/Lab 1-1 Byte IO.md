@@ -14,7 +14,6 @@ The primary activity in this lab is copying a file byte by byte using `FileInput
 
 1. Create a Java Project with a package called iolab.
   <br/>
-  <br/>
 2. Copy the sample data `test.txt` file from the lab resources folder into the root of the project directory. Make sure that it is the foor of the project directory and _not_ the root of the `src` directory. If you put it into any other location, your code will not be able to find it and will throw an `IOException` when an attempt is made to open it.
   <br/>
   <br/>
