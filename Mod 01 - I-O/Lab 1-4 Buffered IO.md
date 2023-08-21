@@ -1,12 +1,13 @@
-# Lab 1-4 Biffered IO
+# Lab 1-4 Buffered IO
 ### IBM Intermediate Java
 
 ---
 
 ## Lab Overview
 
-In this lab, we will modify the first lab to read and write a file character by character using the `FileReader` and `FileWriter` interfaces
-
+1. Create a new Java project and copy the same `SampleText.txt`` file that you have been using in the previous labs into the root directory of the project.<br/>
+2. Create a package named `iolab`
+Create a class named `LineCopy` with a `main()` method.
 ## Part One: Setup
 
 Start with the code frm the first lab. It is in the `Lab 1-1 src` directory. Note that the name of the class has been changed from `ByteCopy` to `CharCopy`
