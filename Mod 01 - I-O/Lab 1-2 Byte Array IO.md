@@ -5,7 +5,7 @@
 
 ## Lab Overview
 
-In this lab you will be copying a file via using FileInputStream and FileOutputStream that read and write from a 128 byte buffer by modifying the code from the last lab
+In this lab you will be copying a file via using FileInputStream and FileOutputStream that read and write from a 128 byte buffer by modifying the code from the last lab.
 
 
 ## Part One: Setup
@@ -47,7 +47,7 @@ public class ByteCopy {
 }
 
 ```
-
+ 
 <br/><br/>
 
 ## Part Two: Create the Buffer
