@@ -9,9 +9,11 @@ In this lab, we will modify the first lab to read and write a file character by 
 
 ## Part One: Setup
 
-Start with the code frm the first lab. It is in the `Lab 1-1 src` directory. Note that the name of the class has been changed from `ByteCopy` to `CharCopy`
+Start with the code from the first lab. It is in the `Lab 1-1 src` directory. Note that the name of the class has been changed from `ByteCopy` to `CharCopy`
 
 Go back to either of the `ByteCopy` labs, record the number of bytes copied.  It should be `4489`
+
+
 Starter code:
 
 ```java
@@ -42,7 +44,7 @@ public class CharCopy {
 			infile.close();
 			outfile.close();
 		}
-        System.out.println(byteCount + " bytes copied");
+    System.out.println(byteCount + " bytes copied");
 	}
 }
 ```

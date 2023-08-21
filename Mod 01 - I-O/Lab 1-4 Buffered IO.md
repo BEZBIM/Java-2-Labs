@@ -5,146 +5,88 @@
 
 ## Lab Overview
 
+In this lab, you will implement a BufferedReader and BufferedWriter to perform the same file copy that you did in the previous labs.od.
+
+
+## Part One: Setup
+
 1. Create a new Java project and copy the same `SampleText.txt`` file that you have been using in the previous labs into the root directory of the project.<br/>
 2. Create a package named `iolab`
 Create a class named `LineCopy` with a `main()` method.
-## Part One: Setup
+3. Copy the `SampleText.txt` file as before to the root of the project.
 
-Start with the code frm the first lab. It is in the `Lab 1-1 src` directory. Note that the name of the class has been changed from `ByteCopy` to `CharCopy`
+<br/><br/>
 
-Go back to either of the `ByteCopy` labs, record the number of bytes copied.  It should be `4489`
-Starter code:
+## Part Two: Implementing the Code
+
+The buffered forms of `FileReader` and `FileWriter` take objects of these types and add buffering capabilities.  We also need a `String` variable to hold the input string.
 
 ```java
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
-public class CharCopy {
-    
-	public static void main(String[] args) throws IOException {
-		FileInputStream infile = null;
-		FileOutputStream outfile = null;
-		byte b = 0;
-		int byteCount = 0;
+public static void main(String[] args) throws IOException {
 		
-		try {
-			infile = new FileInputStream("SampleText.txt");
-			outfile = new FileOutputStream("Copy.txt");
-			
-			while ((b = (byte)infile.read()) != -1) {
-				outfile.write(b);
-				byteCount++;
-			}
-            
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
-		} finally {
-			infile.close();
-			outfile.close();
-		}
-        System.out.println(byteCount + " bytes copied");
-	}
-}
-```
-## Change the Code
-
-The first code change is to convert it IO classes to `FileReader` and `FileWriter` and to use the variables `c` to hold a character. We are not using a `char` type since the interface returns an `int`. The variable `charCount` records the number of characters processed
-
-```java
- 	public static void main(String[] args) throws IOException {
+	FileReader infile = null;
+	FileWriter outfile = null;
+	BufferedReader inbuff = null;
+	BufferedWriter outbuff = null;
 		
-		FileReader infile = null;
-		FileWriter outfile = null;
-		int c = 0;
-		int charCount = 0;
+	String line = null;
 ```
 
-We can't just open text file anymore without knowing how it's encoded. We are specifying here that the input and output files will be UTF-8 encoded. If we do not supply an encoding, it will default to whatever your platform defaults to. Normally this is UTF-8 but it could also be ASCII or anything else.
+Create the buffered reader and writer.
 
-Othewise it works the same as for the `ByteCopy` class. The difference is that the `FileReader` and `FileWriter` classes handle the mapping from byte to code point or character and back again.
 
 ```java
-		try {
-			infile = new FileReader("SampleText.txt", StandardCharsets.UTF_8);
-			outfile = new FileWriter("Copy.txt", StandardCharsets.UTF_8);
+try {
+	infile = new FileReader("SampleText.txt", StandardCharsets.UTF_8);
+	inbuff = new BufferedReader(infile);
+	outfile = new FileWriter("Copy.txt", StandardCharsets.UTF_8);
+	outbuff = new BufferedWriter(outfile);
+
+```
+Now read a line at a time until the end of the file. When writing the output, remember that the input reader only reads up to the end of line character so it is not in the input buffer. It has to be added when we output the file.
+
+```java
+try {
+	infile = new FileReader("SampleText.txt", StandardCharsets.UTF_8);
+	inbuff = new BufferedReader(infile);
+	outfile = new FileWriter("Copy.txt", StandardCharsets.UTF_8);
+	outbuff = new BufferedWriter(outfile);
 			
-			while ((c = infile.read()) != -1) {
-				outfile.write(c);
-				charCount++;
-				
-			}
-			
-		    } catch (IOException e) {
-			    System.out.println(e);
-			
-		    } finally {
-			    if (infile != null) infile.close();
-			    if (outfile != null) outfile.close();
-			
-        }
-        System.out.println(charCount + " characters copied");
+	while ((line = inbuff.readLine()) != null) {
+		outbuff.write(line);
+		outbuff.newLine();
+		System.out.println("Line = "+ line) ;
 	}
+
 ```
 
-The last line prints out the number of characters. In this case, the 4899 bytes is 2512 characters.
-
-## Optional Section
-
-The following code is the character equivalent to the byte stream array. We will not do this in class but you can try on your own
+Close the files but be sure to flush the output buffer before you do.
 
 ```java
-package iolab;
-
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.CharBuffer;
-import java.nio.charset.StandardCharsets;
-
-public class CharCopy {
+try {
+	infile = new FileReader("SampleText.txt", StandardCharsets.UTF_8);
+	inbuff = new BufferedReader(infile);
+	outfile = new FileWriter("Copy.txt", StandardCharsets.UTF_8);
+	outbuff = new BufferedWriter(outfile);
 	
-
-	public static void main(String[] args) throws IOException {
-		
-		FileReader infile = null;
-		FileWriter outfile = null;
-		
-		char [] c = new char[128];
-		
-		int charCount = 0;
-		int charsRead = 0;
-		int readCount = 0;
-		
-		try {
-			infile = new FileReader("SampleText.txt", StandardCharsets.UTF_8);
-			outfile = new FileWriter("Copy.txt", StandardCharsets.UTF_8);
-			
-			while ((charsRead = infile.read(c)) != -1) {
-				outfile.write(c);
-				
-				charCount = charCount + charsRead;
-				readCount++;
-				System.out.println("Read " + readCount + " Chars read " + charsRead);
-				
-			}
-			
-		} catch (IOException e) {
-			System.out.println(e);
-			
-		} finally {
-			if (infile != null) infile.close();
-			if (outfile != null) outfile.close();
-			
+	while ((line = inbuff.readLine()) != null) {
+  	outbuff.write(line);
+		outbuff.newLine();
+		System.out.println("Line = "+ line) ;
 		}
-        System.out.println(charCount + " characters copied");
-	}
-
+			
+} catch (IOException e) {
+	System.out.println(e);
+	
+} finally {
+	outbuff.flush();
+	if (inbuff != null) inbuff.close();
+	if (outbuff != null) outbuff.close();	
 }
-
 
 ```
 
+Run the code and ensure it works.
 
 ---
 ## DONE!!
