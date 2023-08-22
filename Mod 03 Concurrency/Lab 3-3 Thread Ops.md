@@ -1,4 +1,4 @@
-# Lab 2-3 Thead Methods
+# Lab 3-3 Thead Methods
 ### IBM Intermediate Java
 
 ---

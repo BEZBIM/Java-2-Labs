@@ -1,4 +1,4 @@
-# Lab 2-2 Implementing the Runnable Interface
+# Lab 3-2 Implementing the Runnable Interface
 ### IBM Intermediate Java
 
 ---
